@@ -314,19 +314,19 @@ const en: Content = {
             quote: 'Managing desert tours is complex, but TourCare made it simple and efficient.',
             author: 'Operations Director',
             company: 'White Desert Travel',
-            logoUrl: 'https://placehold.co/200x100?text=White+Desert'
+            logoUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/68/ba/5e/caption.jpg?w=1200&h=-1&s=1'
         },
         {
                 quote: 'Streamlined our agency workflows perfectly. A must-have tool for modern travel agencies.',
                 author: 'Managing Director',
                 company: 'E.T.O Travels',
-                logoUrl: 'https://placehold.co/200x100?text=ETO+Travels'
+                logoUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/bb/dc/6f/caption.jpg?w=1200&h=-1&s=1'
             },
             {
                 quote: 'The automation capabilities have transformed how we handle bookings.',
                 author: 'Director',
                 company: 'FTS Travels',
-                logoUrl: 'https://placehold.co/200x100?text=FTS+Travels'
+                logoUrl: 'https://ftstravels.com/cropped-logo-2.png'
             }
         ]
     },
@@ -825,19 +825,19 @@ const ar: Content = {
                 quote: 'إدارة رحلات السفاري الصحراوية معقدة، لكن TourCare جعلها بسيطة وفعالة.',
                 author: 'مدير العمليات',
                 company: 'وايت ديزرت ترافيل',
-                logoUrl: 'https://placehold.co/200x100?text=White+Desert'
+                logoUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/68/ba/5e/caption.jpg?w=1200&h=-1&s=1'
             },
             {
                 quote: 'قام بتبسيط سير عمل وكالتنا بشكل مثالي. أداة لا غنى عنها لوكالات السفر الحديثة.',
                 author: 'المدير العام',
                 company: 'إي تي أو ترافيلز',
-                logoUrl: 'https://placehold.co/200x100?text=ETO+Travels'
+                logoUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/bb/dc/6f/caption.jpg?w=1200&h=-1&s=1'
             },
             {
                 quote: 'لقد غيرت قدرات الأتمتة طريقة تعاملنا مع الحجوزات.',
                 author: 'المدير',
                 company: 'إف تي إس ترافيلز',
-                logoUrl: 'https://placehold.co/200x100?text=FTS+Travels'
+                logoUrl: 'https://ftstravels.com/cropped-logo-2.png'
             }
         ]
     },
