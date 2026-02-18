@@ -266,15 +266,24 @@ const Header: React.FC<HeaderProps> = ({ content, lang, availableLangs, changeLa
     <>
       <header id="main-header" className={headerClasses}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center">
-            <a href="#/" className="block z-10" aria-label="TourCare.ai Home">
+          <div className="flex items-center relative">
+            <a href="#/" className="block z-50" aria-label="TourCare.ai Home">
               <img 
                 src="https://res.cloudinary.com/dqlurfwet/image/upload/v1760801741/20251018_1834_%D8%AA%D9%83%D8%A8%D9%8A%D8%B1_%D9%84%D9%88%D8%AC%D9%88_TourCare.AI_remix_01k7vz6rjze1gbrer8wx1eke0k_qgdxxq.png" 
                 alt="TourCare.ai logo" 
-                style={{ height: isScrolled ? 'calc(var(--logo-height) * 0.8)' : 'var(--logo-height)', transition: 'height 0.3s ease' }}
+                style={{ 
+                  height: isScrolled ? 'calc(var(--logo-height) * 1.2)' : 'calc(var(--logo-height) * 1.5)', 
+                  transition: 'all 0.3s ease',
+                  position: 'absolute',
+                  top: isScrolled ? '-10px' : '-20px',
+                  width: 'auto',
+                  maxWidth: 'none'
+                }}
                 className="object-contain"
               />
             </a>
+            {/* Placeholder to keep spacing in header flow */}
+            <div style={{ width: '140px', height: '1px' }}></div>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
