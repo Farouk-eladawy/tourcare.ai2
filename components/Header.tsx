@@ -218,11 +218,28 @@ const MobileMenu: FC<{
 const Header: React.FC<HeaderProps> = ({ content, lang, availableLangs, changeLanguage, onAuthClick, currentUser, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      
+      // Smart scroll logic
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down & past top
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY.current) {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setIsScrolled(currentScrollY > 10);
+      lastScrollY.current = currentScrollY;
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -237,23 +254,24 @@ const Header: React.FC<HeaderProps> = ({ content, lang, availableLangs, changeLa
   }, [isMobileMenuOpen]);
 
   const headerClasses = `
-    sticky top-0 z-40 transition-all duration-300
+    fixed top-0 w-full z-40 transition-all duration-300 ease-in-out transform
+    ${isVisible ? 'translate-y-0' : '-translate-y-full'}
     ${isScrolled
-      ? 'bg-brand-white/80 backdrop-blur-lg border-b border-gray-200/80 shadow-sm'
-      : 'bg-transparent border-b-transparent'
+      ? 'bg-brand-white/90 backdrop-blur-lg border-b border-gray-200/80 shadow-md py-2' 
+      : 'bg-transparent border-b-transparent py-4'
     }
   `;
 
   return (
     <>
       <header id="main-header" className={headerClasses}>
-        <div className="container mx-auto px-6 py-0 flex justify-between items-center">
+        <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center">
             <a href="#/" className="block z-10" aria-label="TourCare.ai Home">
               <img 
                 src="https://res.cloudinary.com/dqlurfwet/image/upload/v1760801741/20251018_1834_%D8%AA%D9%83%D8%A8%D9%8A%D8%B1_%D9%84%D9%88%D8%AC%D9%88_TourCare.AI_remix_01k7vz6rjze1gbrer8wx1eke0k_qgdxxq.png" 
                 alt="TourCare.ai logo" 
-                style={{ height: 'var(--logo-height)' }}
+                style={{ height: isScrolled ? 'calc(var(--logo-height) * 0.8)' : 'var(--logo-height)', transition: 'height 0.3s ease' }}
                 className="object-contain"
               />
             </a>
