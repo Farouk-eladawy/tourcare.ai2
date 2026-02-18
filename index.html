@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dqlurfwet/image/upload/v1760801741/20251018_1834_%D8%AA%D9%83%D8%A8%D9%8A%D8%B1_%D9%84%D9%88%D8%AC%D9%88_TourCare.AI_remix_01k7vz6rjze1gbrer8wx1eke0k_qgdxxq.png" />
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dqlurfwet/image/upload/v1760801741/20251018_1834_%D8%AA%D9%83%D8%A8%D9%8A%D8%B1_%D9%84%D9%88%D8%AC%D9%88_TourCare.AI_remix_01k7vz6rjze1gbrer8wx1eke0k_qgdxxq.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TourCare.ai - AI & Automation for Tourism</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="TourCare.ai offers AI-powered automation for tourism operations and customer service, helping GetYourGuide suppliers streamline bookings, messaging, and support.">
+    <meta name="keywords" content="AI, Automation, Tourism, GetYourGuide, Tour Operators, Customer Service, Chatbot">
+    <meta property="og:title" content="TourCare.ai - AI & Automation for Tourism">
+    <meta property="og:description" content="Streamline your tour operations with AI. Automated messaging, booking ingestion, and smart replies for GetYourGuide suppliers.">
+    <meta property="og:image" content="https://res.cloudinary.com/dqlurfwet/image/upload/v1760801741/20251018_1834_%D8%AA%D9%83%D8%A8%D9%8A%D8%B1_%D9%84%D9%88%D8%AC%D9%88_TourCare.AI_remix_01k7vz6rjze1gbrer8wx1eke0k_qgdxxq.png">
+    <meta property="og:url" content="https://tourcare.ai">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Poppins', 'sans-serif'],
+              'cairo': ['Cairo', 'sans-serif'],
+            },
+            colors: {
+              'brand-white': '#F9FAFB', // Soft off-white for main backgrounds
+              'brand-light-gray': '#F3F4F6', // Light gray for secondary backgrounds
+              'brand-blue': '#0c1a3e', // Kept for dark elements like the footer
+              'brand-accent': '#059669', // A sophisticated, professional green
+              'brand-accent-hover': '#047857', // A slightly darker green for hover states
+            },
+            animation: {
+              'scroll': 'scroll 40s linear infinite',
+            },
+            keyframes: {
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Guiding Assistant Custom Properties */
+      :root {
+        --logo-height: 160px; /* Centralized logo height control */
+        --bot-size: 72px;
+        --bot-color-primary: #0c1a3e;      /* brand-blue */
+        --bot-color-secondary: #059669;   /* brand-accent */
+        --bot-color-eye-glow: #6ee7b7;      /* A lighter green for glow */
+      }
+      
+      /* Scroll Animation Base Styles */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .scroll-animate.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Test Automation Page Animation */
+      @keyframes hit {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(calc(100% + 4rem)); } /* Move right */
+        55% { transform: translateX(calc(100% + 3.5rem)) scale(1.1); } /* Hit effect */
+        100% { transform: translateX(0); } /* Return */
+      }
+      .animate-hit {
+          animation: hit 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai"
+  }
+}
+</script>
+<!-- tsparticles library for background animations -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.min.js"></script>
+
+<!-- Structured Data (Schema.org) for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TourCare.ai",
+  "url": "https://tourcare.ai",
+  "logo": "https://res.cloudinary.com/dqlurfwet/image/upload/v1760801741/20251018_1834_%D8%AA%D9%83%D8%A8%D9%8A%D8%B1_%D9%84%D9%88%D8%AC%D9%88_TourCare.AI_remix_01k7vz6rjze1gbrer8wx1eke0k_qgdxxq.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "support@tourcare.ai"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AI & Automation for Tourism Operations",
+  "serviceType": "SaaS",
+  "provider": {
+    "@type": "Organization",
+    "name": "TourCare.ai"
+  },
+  "description": "Reduce your team's manual workload by over 80% and enhance your guest satisfaction scores with AI-powered automation for GetYourGuide suppliers. Features include automated messaging, booking ingestion, and smart replies.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Basic Setup",
+      "price": "999",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro Setup",
+      "price": "1499",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Advanced Setup",
+      "price": "1999",
+      "priceCurrency": "USD"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is the primary goal of automation systems in booking management?","acceptedAnswer":{"@type":"Answer","text":"To facilitate the automatic processing of bookings from multiple sources, reducing the need for manual entry, which increases speed and accuracy."}},
+    {"@type":"Question","name":"How can the system handle data from different platforms?","acceptedAnswer":{"@type":"Answer","text":"Through a unified parsing engine that reads data in various formats, processes it with AI, and then links it to a central database."}},
+    {"@type":"Question","name":"What is the benefit of linking email to the booking system?","acceptedAnswer":{"@type":"Answer","text":"It allows for the direct extraction of booking information from messages and converts them into ready records without human intervention."}},
+    {"@type":"Question","name":"What is the role of integration between websites and internal booking systems?","acceptedAnswer":{"@type":"Answer","text":"It enables two-way data transfer between the website and the internal system to ensure real-time synchronization of prices, availability, and bookings."}},
+    {"@type":"Question","name":"How do location-based systems improve the customer experience?","acceptedAnswer":{"@type":"Answer","text":"By analyzing the locations of hotels or activities and linking them with appropriate additional services like transportation or nearby tours."}},
+    {"@type":"Question","name":"What are the most important uses of AI in digital tourism?","acceptedAnswer":{"@type":"Answer","text":"Analyzing messages, classifying requests, predicting customer behavior, and automatically extracting information from texts and reviews."}},
+    {"@type":"Question","name":"How does AI help in reducing operational errors?","acceptedAnswer":{"@type":"Answer","text":"By automatically verifying data and matching it with previous records, and alerting teams to anomalies or duplications."}},
+    {"@type":"Question","name":"What is the difference between automated analysis and intelligent analysis of data?","acceptedAnswer":{"@type":"Answer","text":"Automated analysis relies on predefined steps, while intelligent analysis uses machine learning algorithms that evolve and learn from past patterns."}},
+    {"@type":"Question","name":"How is AI used to improve customer service?","acceptedAnswer":{"@type":"Answer","text":"Through automated responses to inquiries, providing personalized suggestions, and analyzing customer interactions to enhance communication quality."}},
+    {"@type":"Question","name":"Why is it preferable to use unified communication channels in organizations?","acceptedAnswer":{"@type":"Answer","text":"To ensure information reaches quickly and accurately, and to prevent duplicate responses or conflicting data between departments."}},
+    {"@type":"Question","name":"What is the role of automated systems in managing instant chats?","acceptedAnswer":{"@type":"Answer","text":"Analyzing incoming messages, identifying the type of request, sending appropriate responses, and escalating complex cases to the relevant team."}},
+    {"@type":"Question","name":"What is the importance of linking messaging apps with operational databases?","acceptedAnswer":{"@type":"Answer","text":"To update the operational status directly from the conversation, and to log all interactions as a reliable data source."}},
+    {"@type":"Question","name":"How can automated systems maintain a human-like experience in communication?","acceptedAnswer":{"@type":"Answer","text":"By using intelligently crafted responses with a natural tone and personalizing messages based on customer data and conversation context."}},
+    {"@type":"Question","name":"What is the importance of daily reports in automated work environments?","acceptedAnswer":{"@type":"Answer","text":"They help monitor performance in real-time, detect problems early, and provide a clear overview for senior management."}},
+    {"@type":"Question","name":"How can failures in automation systems be detected?","acceptedAnswer":{"@type":"Answer","text":"Through a continuous monitoring system that measures the operational status of each task and sends an immediate alert if any workflow stops."}},
+    {"@type":"Question","name":"What is the benefit of an analytical dashboard?","acceptedAnswer":{"@type":"Answer","text":"It enables tracking of performance indicators, identifying recurring errors, and analyzing trends to make data-driven decisions."}},
+    {"@type":"Question","name":"What is the purpose of creating custom interfaces for different users?","acceptedAnswer":{"@type":"Answer","text":"To tailor tools and tasks for each category (driver, guide, management, sales) to facilitate work and reduce errors."}},
+    {"@type":"Question","name":"How do interactive interfaces contribute to improving team efficiency?","acceptedAnswer":{"@type":"Answer","text":"By displaying tasks in real-time and allowing direct updates without needing to consult management."}},
+    {"@type":"Question","name":"What is the importance of interfaces that work directly from the browser?","acceptedAnswer":{"@type":"Answer","text":"They allow access from anywhere without needing to install applications, making the system flexible and easy to use."}},
+    {"@type":"Question","name":"Why is it preferable to adopt integrated electronic payment systems?","acceptedAnswer":{"@type":"Answer","text":"To improve the customer experience, speed up financial collection, and automatically update the financial status in the database."}},
+    {"@type":"Question","name":"What is the benefit of automated invoice generation?","acceptedAnswer":{"@type":"Answer","text":"It ensures accuracy and transparency, reduces human errors, and links every transaction to its specific booking."}},
+    {"@type":"Question","name":"What is the importance of data standardization in operational systems?","acceptedAnswer":{"@type":"Answer","text":"To ensure consistency in reports and prevent duplicate records or discrepancies in destination and product names."}},
+    {"@type":"Question","name":"How can incorrect or duplicate records be detected?","acceptedAnswer":{"@type":"Answer","text":"By using advanced matching algorithms based on linguistic similarity or artificial intelligence."}},
+    {"@type":"Question","name":"What is the benefit of predictive analysis in business management?","acceptedAnswer":{"@type":"Answer","text":"It helps in forecasting demand, identifying peak seasons, and allocating resources in advance for maximum benefit."}},
+    {"@type":"Question","name":"How do intelligent analysis systems contribute to performance improvement?","acceptedAnswer":{"@type":"Answer","text":"By measuring the results of each process and suggesting automated improvements in workflow, communication, or pricing."}},
+    {"@type":"Question","name":"What are the most important performance indicators in automation systems?","acceptedAnswer":{"@type":"Answer","text":"Response time, success rate, data accuracy, error rate, communication efficiency, and volume of executed bookings."}},
+    {"@type":"Question","name":"How does automation affect operational efficiency?","acceptedAnswer":{"@type":"Answer","text":"It reduces the time and effort required, improves service quality, and allows the team to focus on analytical tasks instead of repetitive ones."}},
+    {"@type":"Question","name":"What are the best ways to improve automated systems over time?","acceptedAnswer":{"@type":"Answer","text":"By adding new intelligence modules, improving interfaces, continuously monitoring performance, and conducting regular system tests."}},
+    {"@type":"Question","name":"What is the importance of having data backups?","acceptedAnswer":{"@type":"Answer","text":"To ensure business continuity in case of failures or data loss, and to protect sensitive records."}},
+    {"@type":"Question","name":"What is the security of keys and software integrations be ensured?","acceptedAnswer":{"@type":"Answer","text":"By storing them in secure secret management systems (like Google Secrets Manager) and defining access permissions."}}
+  ]
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
