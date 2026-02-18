@@ -486,14 +486,14 @@ const en: Content = {
         title: 'Direct Contact',
         items: [
             { icon: '📧', label: 'Email Us', value: 'support@tourcare.ai', href: 'mailto:support@tourcare.ai' },
-            { icon: '📞', label: 'Call Us (UAE)', value: '+971 50 123 4567', href: 'tel:+971501234567' },
-            { icon: '📍', label: 'Our Office', value: 'Dubai, United Arab Emirates' }
+            { icon: '📞', label: 'Call Us (EGP)', value: '+201010323484', href: 'tel:+201010323484' },
+            { icon: '📍', label: 'Our Office', value: 'Maadi, ElNasr St, El-Basatin Sharkeya, El Basatin, Cairo Governorate' }
         ]
     },
     instantChannels: {
         title: 'Instant Channels',
         items: [
-            { icon: '💬', label: 'WhatsApp', action: 'Chat with us now', href: 'https://wa.me/971501234567' },
+            { icon: '💬', label: 'WhatsApp', action: 'Chat with us now', href: 'https://wa.me/201010323484' },
             { icon: '🤖', label: 'AI Assistant', action: 'Ask our AI a question', href: '#/ai-assistant-shortcut' }
         ]
     },
@@ -997,14 +997,14 @@ const ar: Content = {
             title: 'الاتصال المباشر',
             items: [
                 { icon: '📧', label: 'راسلنا عبر البريد الإلكتروني', value: 'support@tourcare.ai', href: 'mailto:support@tourcare.ai' },
-                { icon: '📞', label: 'اتصل بنا (الإمارات)', value: '+971 50 123 4567', href: 'tel:+971501234567' },
-                { icon: '📍', label: 'مكتبنا', value: 'دبي، الإمارات العربية المتحدة' }
+                { icon: '📞', label: 'اتصل بنا (مصر)', value: '+201010323484', href: 'tel:+201010323484' },
+                { icon: '📍', label: 'مكتبنا', value: 'المعادي، شارع النصر، البساتين الشرقية، البساتين، محافظة القاهرة' }
             ]
         },
         instantChannels: {
             title: 'القنوات الفورية',
             items: [
-                { icon: '💬', label: 'WhatsApp', action: 'تحدث معنا الآن', href: 'https://wa.me/971501234567' },
+                { icon: '💬', label: 'WhatsApp', action: 'تحدث معنا الآن', href: 'https://wa.me/201010323484' },
                 { icon: '🤖', label: 'مساعد الذكاء الاصطناعي', action: 'اطرح سؤالاً على الذكاء الاصطناعي لدينا', href: '#/ai-assistant-shortcut' }
             ]
         },
@@ -1479,14 +1479,14 @@ const de: Content = {
         title: 'Direkter Kontakt',
         items: [
             { icon: '📧', label: 'E-Mail an uns', value: 'support@tourcare.ai', href: 'mailto:support@tourcare.ai' },
-            { icon: '📞', label: 'Rufen Sie uns an (VAE)', value: '+971 50 123 4567', href: 'tel:+971501234567' },
-            { icon: '📍', label: 'Unser Büro', value: 'Dubai, Vereinigte Arabische Emirate' }
+            { icon: '📞', label: 'Rufen Sie uns an (EGP)', value: '+201010323484', href: 'tel:+201010323484' },
+            { icon: '📍', label: 'Unser Büro', value: 'Maadi, ElNasr St, El-Basatin Sharkeya, El Basatin, Cairo Governorate' }
         ]
     },
     instantChannels: {
         title: 'Sofortkanäle',
         items: [
-            { icon: '💬', label: 'WhatsApp', action: 'Chatten Sie jetzt mit uns', href: 'https://wa.me/971501234567' },
+            { icon: '💬', label: 'WhatsApp', action: 'Chatten Sie jetzt mit uns', href: 'https://wa.me/201010323484' },
             { icon: '🤖', label: 'KI-Assistent', action: 'Stellen Sie unserer KI eine Frage', href: '#/ai-assistant-shortcut' }
         ]
     },
