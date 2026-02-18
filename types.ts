@@ -113,11 +113,16 @@ export interface IntegrationsContent {
     partners: string[];
 }
 
-export interface TestimonialsContent {
-    title: string;
+export interface TestimonialItem {
     quote: string;
     author: string;
     company: string;
+    logoUrl?: string;
+}
+
+export interface TestimonialsContent {
+    title: string;
+    items: TestimonialItem[];
 }
 
 export interface Plan {

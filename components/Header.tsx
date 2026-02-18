@@ -257,9 +257,6 @@ const Header: React.FC<HeaderProps> = ({ content, lang, availableLangs, changeLa
                 className="object-contain"
               />
             </a>
-            <span className="bg-yellow-300 text-yellow-800 text-xs font-bold px-2 py-1 rounded-full ltr:ml-2 rtl:mr-2 hidden sm:block">
-              Demo Mode
-            </span>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

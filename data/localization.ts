@@ -297,10 +297,39 @@ const en: Content = {
   },
   testimonials: {
     title: 'What Our Partners Say',
-    quote: 'TourCare.ai has been a game-changer for our operations. We\'ve cut down our manual workload by more than 80% and our customer satisfaction has never been higher. It\'s a must-have for any serious tour operator on GetYourGuide.',
-    author: 'Ahmed M.',
-    company: 'Operations Manager, OceanAir Travels',
-  },
+    items: [
+        {
+            quote: 'TourCare.ai has significantly optimized our hotel operations. The automation is seamless.',
+            author: 'Operations Manager',
+            company: 'Amarina Hotels & Resorts',
+            logoUrl: 'https://r.profitroom.pl/amarinahotels/images/202411221206190.Logo_Amarina.png'
+        },
+        {
+            quote: 'Our guest experience has improved drastically since implementing TourCare. Highly recommended.',
+            author: 'Front Office Manager',
+            company: 'Magic Beach Hotel',
+            logoUrl: 'https://www.magicbeachhotelhurghada.com/sites/magicbeachhotelhurghada/files/logo.png'
+        },
+        {
+            quote: 'Managing desert tours is complex, but TourCare made it simple and efficient.',
+            author: 'Operations Director',
+            company: 'White Desert Travel',
+            logoUrl: 'https://placehold.co/200x100?text=White+Desert'
+        },
+        {
+                quote: 'Streamlined our agency workflows perfectly. A must-have tool for modern travel agencies.',
+                author: 'Managing Director',
+                company: 'E.T.O Travels',
+                logoUrl: 'https://placehold.co/200x100?text=ETO+Travels'
+            },
+            {
+                quote: 'The automation capabilities have transformed how we handle bookings.',
+                author: 'Director',
+                company: 'FTS Travels',
+                logoUrl: 'https://placehold.co/200x100?text=FTS+Travels'
+            }
+        ]
+    },
   pricing: {
     title: 'Simple, Transparent Pricing',
     plans: [
@@ -564,11 +593,9 @@ const en: Content = {
         ]
       },
       pricing: {
-        title: 'Pricing for the Full OS',
+        title: 'Book Your Free Consultation',
         plans: [
-          { name: 'Pro', price: '$999', features: ['All core features', 'Up to 3 integrations', '24/7 Live Support'], cta: 'Choose Pro' },
-          { name: 'Advanced', price: '$1,999', features: ['Everything in Pro', 'Unlimited integrations', 'API Access'], cta: 'Choose Advanced' },
-          { name: 'Enterprise', price: 'Custom', features: ['Fully bespoke solution', 'Dedicated infrastructure', 'On-site training'], cta: 'Contact Us' },
+          { name: 'Free Consultation', price: 'Free', features: ['Operational Audit', 'Custom Demo', 'Q&A Session'], cta: 'Book Now' }
         ]
       },
       cta: { title: 'Ready for a True Autopilot?', subtitle: 'Let\'s build your custom operating system.', cta: 'Book a Scoping Call' },
@@ -781,9 +808,38 @@ const ar: Content = {
     },
     testimonials: {
         title: 'ماذا يقول شركاؤنا',
-        quote: 'لقد كان TourCare.ai بمثابة تغيير جذري في عملياتنا. لقد قلصنا عبء العمل اليدوي لدينا بأكثر من 80٪ ولم يكن رضا عملائنا أعلى من أي وقت مضى. إنه أمر لا بد منه لأي منظم رحلات جاد على GetYourGuide.',
-        author: 'أحمد م.',
-        company: 'مدير العمليات، OceanAir Travels',
+        items: [
+            {
+                quote: 'لقد ساهم TourCare.ai بشكل كبير في تحسين عملياتنا الفندقية. الأتمتة سلسة للغاية.',
+                author: 'مدير العمليات',
+                company: 'فنادق ومنتجعات أمارين',
+                logoUrl: 'https://r.profitroom.pl/amarinahotels/images/202411221206190.Logo_Amarina.png'
+            },
+            {
+                quote: 'تحسنت تجربة ضيوفنا بشكل كبير منذ تطبيق TourCare. نوصي به بشدة.',
+                author: 'مدير المكتب الأمامي',
+                company: 'فندق ماجيك بيتش',
+                logoUrl: 'https://www.magicbeachhotelhurghada.com/sites/magicbeachhotelhurghada/files/logo.png'
+            },
+            {
+                quote: 'إدارة رحلات السفاري الصحراوية معقدة، لكن TourCare جعلها بسيطة وفعالة.',
+                author: 'مدير العمليات',
+                company: 'وايت ديزرت ترافيل',
+                logoUrl: 'https://placehold.co/200x100?text=White+Desert'
+            },
+            {
+                quote: 'قام بتبسيط سير عمل وكالتنا بشكل مثالي. أداة لا غنى عنها لوكالات السفر الحديثة.',
+                author: 'المدير العام',
+                company: 'إي تي أو ترافيلز',
+                logoUrl: 'https://placehold.co/200x100?text=ETO+Travels'
+            },
+            {
+                quote: 'لقد غيرت قدرات الأتمتة طريقة تعاملنا مع الحجوزات.',
+                author: 'المدير',
+                company: 'إف تي إس ترافيلز',
+                logoUrl: 'https://placehold.co/200x100?text=FTS+Travels'
+            }
+        ]
     },
     pricing: {
         title: 'أسعار بسيطة وشفافة',
@@ -1265,9 +1321,7 @@ const de: Content = {
   },
   testimonials: {
     title: 'Was unsere Partner sagen',
-    quote: 'TourCare.ai hat unsere Arbeitsabläufe revolutioniert. Wir haben unseren manuellen Arbeitsaufwand um mehr als 80 % reduziert und unsere Kundenzufriedenheit war noch nie höher. Es ist ein Muss für jeden ernsthaften Reiseveranstalter auf GetYourGuide.',
-    author: 'Ahmed M.',
-    company: 'Operations Manager, OceanAir Travels',
+    items: en.testimonials.items
   },
   pricing: {
     title: 'Einfache, transparente Preise',
