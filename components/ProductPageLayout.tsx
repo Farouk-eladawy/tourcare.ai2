@@ -105,9 +105,9 @@ const ProductPageLayout: React.FC<ProductPageLayoutProps> = ({ content, onChoose
             <ParticlesBackground id={`particles-${content.navTitle}-pricing`} />
             <div className="relative container mx-auto px-6 text-center z-20">
                 <h2 className="text-3xl font-bold text-gray-900 mb-12">{content.pricing.title}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className={`grid grid-cols-1 ${content.pricing.plans.length === 1 ? 'md:grid-cols-1 max-w-md' : 'md:grid-cols-3 max-w-5xl'} gap-8 mx-auto`}>
                     {content.pricing.plans.map((plan, index) => (
-                        <ProductPricingCard key={index} plan={plan} onChoosePlan={() => onChoosePlan(plan.name)} isFeatured={index === 1} />
+                        <ProductPricingCard key={index} plan={plan} onChoosePlan={() => onChoosePlan(plan.name)} isFeatured={content.pricing.plans.length === 1 ? true : index === 1} />
                     ))}
                 </div>
             </div>
